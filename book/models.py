@@ -19,3 +19,14 @@ class Book(models.Model):
     def __str__(self):
         return self.title
     
+class Review(models.Model):
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    reviewer_name = models.CharField(max_length=100)
+    content = models.TextField()
+    rate =[(1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5')]
+
+    rating = models.IntegerField(choices=rate)
+
+    def __str__(self):
+        return f"{self.book.title}"
+    
