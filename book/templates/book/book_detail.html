@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Detail</title>
+</head>
+<body>
+    <h1>{{ book.title }}</h1>
+    <p>Author: {{ book.author }}</p>
+    <p>puplished at: {{ book.publication_date }}</p>
+
+    <!-- Display other book details here -->
+    {% comment %} <a href="{% url 'book-update' book.pk %}">Edit</a>
+    <a href="{% url 'book-delete' book.pk %}">Delete</a>
+    <a href="{% url 'book-list' %}">Back to list</a> {% endcomment %}
+</body>
+</html>
