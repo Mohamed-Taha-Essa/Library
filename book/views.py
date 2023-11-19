@@ -16,4 +16,11 @@ class BookCreateView(CreateView):
 
 class BookDetailView(DetailView):
     model = Book
+
+class BookUpdateView(UpdateView):
+    model = Book
+    fields = '__all__'
+    success_url ='/'
+
+
     
