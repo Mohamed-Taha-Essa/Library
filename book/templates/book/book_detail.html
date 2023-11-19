@@ -9,8 +9,8 @@
     <p>puplished at: {{ book.publication_date }}</p>
 
     <!-- Display other book details here -->
-    {% comment %} <a href="{% url 'book-update' book.pk %}">Edit</a>
+    <a href="{% url 'book-update' book.pk %}">Edit</a>
     <a href="{% url 'book-delete' book.pk %}">Delete</a>
-    <a href="{% url 'book-list' %}">Back to list</a> {% endcomment %}
+    <a href="{% url 'book-list' %}">Back to list</a> 
 </body>
 </html>

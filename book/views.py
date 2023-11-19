@@ -22,5 +22,7 @@ class BookUpdateView(UpdateView):
     fields = '__all__'
     success_url ='/'
 
-
+class BookDeleteView(DeleteView):
+    model = Book
+    success_url = '/'
     

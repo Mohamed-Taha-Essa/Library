@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from book.views import BookListView,BookCreateView,BookDetailView,BookUpdateView
+from book.views import( BookListView,BookCreateView,
+                       BookDetailView,BookUpdateView,
+                       BookDeleteView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +27,6 @@ urlpatterns = [
 
     path('book/create/', BookCreateView.as_view(), name='book-create'),
     path('book/<int:pk>/update/', BookUpdateView.as_view(), name='book-update'),
-
+    path('book/<int:pk>/delete/', BookDeleteView.as_view(), name='book-delete'),
 
 ]
