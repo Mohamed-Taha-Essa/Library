@@ -9,3 +9,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 class BookListView(ListView):
     model = Book
 
+class BookCreateView(CreateView):
+    model = Book
+    fields = '__all__'
+    success_url ='/'
