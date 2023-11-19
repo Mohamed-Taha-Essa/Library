@@ -6,4 +6,6 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 
 # Create your views here.
 
+class BookListView(ListView):
+    model = Book
 
